@@ -1,0 +1,13 @@
+pipeline:
+    build:
+        image: golang
+        commands:
+            - go get
+            - go build
+            - go test
+services:
+    postgres:
+        image: postgres:latest
+        environment:
+        - POSTGRES_USER=ilyaz
+
